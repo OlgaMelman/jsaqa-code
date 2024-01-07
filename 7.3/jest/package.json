@@ -4,8 +4,23 @@
   "description": "jest test",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
-  },
+    "test": "jest",
+    "test:watch": "jest --watchAll",
+    "coverage": "jest --collectCoverage"
+   },
+   "coverageThreshold": {
+     "branches": 100,
+     "functions": 100,
+     "lines": 100
+   },
+   "jest": {
+     "collectCoverageFrom": 
+     [
+       "**/*.{js,jsx}",
+       "!**/node_modules/**",
+       "!**/coverage/**"
+     ]
+   },
   "keywords": [
     "jest",
     "test",
